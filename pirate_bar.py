@@ -17,8 +17,9 @@ repeat up to count =ing 5 and then cease looping
 """
 
 
-import random
 
+
+import random
 
 
 ingredients = {
@@ -39,7 +40,7 @@ questions = {
 }
 
 
-"""    just testing - all of these work
+"""    just testing ... all of these work
 print questions["strong"]
 print drink_desc
 print drink_ingr
@@ -47,10 +48,6 @@ ingredients["tart"] = "add lime"		<--- adds "tart": ["add lime"] to ingredients 
 
 """	
 
-drink_desc = {}
-		# append to store desc name for each y ans
-drink_ingr = {}
-		# append to store random ingr for each y ans
 
 
 def drinks():
@@ -58,41 +55,78 @@ def drinks():
 	print ("Y or N?")
 	strong_ans = raw_input()
 	if strong_ans == "Y" or strong_ans == "y":
-		print "Aye!"
-		drink_desc = ingredients["strong"]
+		print "Aye!",
+		drink_desc[(random.choice(ingredients["strong"]))] = "strong"
 	elif strong_ans == "N" or strong_ans == "n":
 		print "Arrgh!"
 	else:
 		print "Ye son of a biscuit eater! Be ye tryin' to scuttle me rum makin'?"
 
+	print questions["salty"]
+	print ("Y or N?")
+	salty_ans = raw_input()
+	if salty_ans == "Y" or salty_ans == "y":
+		print "Aye!",
+		drink_desc[(random.choice(ingredients["salty"]))] = "salty"
+	elif salty_ans == "N" or salty_ans == "n":
+		print "Arrgh!"
+	else:
+		print "Ye scurvy landlubber! Be ye tryin' to scuttle me rum makin'?"
+	
+	print questions["bitter"]
+	print ("Y or N?")
+	bitter_ans = raw_input()
+	if bitter_ans == "Y" or bitter_ans == "y":
+		print "Aye!",
+		drink_desc[(random.choice(ingredients["bitter"]))] = "bitter"
+	elif bitter_ans == "N" or bitter_ans == "n":
+		print "Arrgh!"
+	else:
+		print "Ye scabby weasel! Be ye tryin' to scuttle me rum makin'?"
+		
+	print questions["sweet"]
+	print ("Y or N?")
+	sweet_ans = raw_input()
+	if sweet_ans == "Y" or "y":
+		print "Aye!",
+		drink_desc[(random.choice(ingredients["sweet"]))] = "sweet"
+	elif sweet_ans == "N" or "n":
+		print "Arrgh!"
+	else:
+		print "Ye gin-soaked sot! Be ye tryin' to scuttle me rum makin'?"
+
+	print questions["fruity"]
+	print ("Y or N?")
+	fruity_ans = raw_input()
+	if fruity_ans == "Y" or "y":
+		print "Aye!",
+		drink_desc[(random.choice(ingredients["fruity"]))] = "fruity"
+	elif fruity_ans == "N" or "n":
+		print "Arrgh!"
+	else:
+		print "Ye grog-faced swabby! Be ye tryin' to scuttle me rum makin'?"
+
+
+	
+
+
+
+
+
+
 
 if __name__ == '__main__':
-
+	drink_desc = {}
 	drinks()
-	print ingredients["strong"]
-	print drink_desc.items()
-
-print ""
-print ""
-
-
-
-
-
-
-"""
-def drinks():
-	count = 0			# add to count for each question asked
+	print "Aye, yer one hard drinker matey! So, I'll mix ye up a ",
+	print str(drink_desc.values()) + " ",
+	print "fancy drink fer ye."
+	print ""
 	
-	while count <= 5:
-		questions()
-		count += 1
+	print "I be puttin' in some ",
+	print str(drink_desc.keys())
+	
 
 
-
-
-
-
-"""
 
 
