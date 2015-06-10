@@ -54,10 +54,10 @@ def drinks():
 	print questions["strong"]
 	print ("Y or N?")
 	strong_ans = raw_input()
-	if strong_ans == "Y" or strong_ans == "y":
+	if strong_ans == "Y" or "y":
 		print "Aye!",
 		drink_desc[(random.choice(ingredients["strong"]))] = "strong"
-	elif strong_ans == "N" or strong_ans == "n":
+	elif strong_ans == "N" or "n":
 		print "Arrgh!"
 	else:
 		print "Ye son of a biscuit eater! Be ye tryin' to scuttle me rum makin'?"
@@ -65,10 +65,10 @@ def drinks():
 	print questions["salty"]
 	print ("Y or N?")
 	salty_ans = raw_input()
-	if salty_ans == "Y" or salty_ans == "y":
+	if salty_ans == "Y" or "y":
 		print "Aye!",
 		drink_desc[(random.choice(ingredients["salty"]))] = "salty"
-	elif salty_ans == "N" or salty_ans == "n":
+	elif salty_ans == "N" or "n":
 		print "Arrgh!"
 	else:
 		print "Ye scurvy landlubber! Be ye tryin' to scuttle me rum makin'?"
@@ -76,7 +76,7 @@ def drinks():
 	print questions["bitter"]
 	print ("Y or N?")
 	bitter_ans = raw_input()
-	if bitter_ans == "Y" or bitter_ans == "y":
+	if bitter_ans == "Y" or "y":
 		print "Aye!",
 		drink_desc[(random.choice(ingredients["bitter"]))] = "bitter"
 	elif bitter_ans == "N" or bitter_ans == "n":
