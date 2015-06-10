@@ -114,7 +114,7 @@ def drinks():
 
 
 
-
+seconds = ""
 
 if __name__ == '__main__':
 	drink_desc = {}
@@ -126,8 +126,19 @@ if __name__ == '__main__':
 	
 	print "I be puttin' in some ",
 	print drink_desc.keys()
+	print ""
+	print ""
+	
+"""
+	while seconds == "Y" or "y":
+		print "Fancy ye another?"
+		seconds = raw_input()	
+		if seconds == "Y" or "y":
+			drinks()
+		else:
+			print "Then g'night to ye!"
 
-
+"""
 
 
 
