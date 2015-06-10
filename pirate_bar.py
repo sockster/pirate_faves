@@ -106,7 +106,8 @@ def drinks():
 	else:
 		print "Ye grog-faced swabby! Be ye tryin' to scuttle me rum makin'?"
 
-
+	
+	
 	
 
 
@@ -124,8 +125,8 @@ if __name__ == '__main__':
 	print ""
 	
 	print "I be puttin' in some ",
-	print str(drink_desc.keys())
-	
+	print drink_desc.keys()
+
 
 
 
